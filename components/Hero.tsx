@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { socialMedia } from "@/data";
+import SocialsButton from "./ui/SocialButtons";
 
 const Hero = () => {
   return (
@@ -33,11 +36,17 @@ const Hero = () => {
           </p>
           <div className="my-8 flex flex-row gap-2">
             {socialMedia.map((profile) => (
-              <a href={profile.link} key={profile.id}>
-                <div className="p-2 border border-[#463F3A] rounded-full">
-                  <img src={profile.img} alt="socials" width={20} height={20} />
-                </div>
-              </a>
+              // <button key={profile.id} type="button">
+              //   <div className="p-2 border border-[#463F3A] rounded-full">
+              //     <img src={profile.img} alt="socials" width={20} height={20} />
+              //   </div>
+              // </button>
+              <SocialsButton
+                key={profile.id}
+                idProps={profile.id}
+                imgProps={profile.img}
+                linkProps={profile.link}
+              />
             ))}
           </div>
         </div>
