@@ -6,6 +6,9 @@ import { socialMedia } from "@/data";
 import SocialsButton from "./ui/SocialButtons";
 
 const Hero = () => {
+  function Redirect(url: string) {
+    window.location.replace(url);
+  }
   return (
     <div className="relative w-full lg:min-h-[70vh] md:min-h-[100vh] pb-20 pt-36">
       <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.05] bg-grid-black/[0.05] flex items-center justify-center absolute top-0 left-0">
@@ -36,17 +39,21 @@ const Hero = () => {
           </p>
           <div className="my-8 flex flex-row gap-2">
             {socialMedia.map((profile) => (
-              // <button key={profile.id} type="button">
-              //   <div className="p-2 border border-[#463F3A] rounded-full">
-              //     <img src={profile.img} alt="socials" width={20} height={20} />
-              //   </div>
-              // </button>
-              <SocialsButton
+              <button
                 key={profile.id}
-                idProps={profile.id}
-                imgProps={profile.img}
-                linkProps={profile.link}
-              />
+                onClick={() => Redirect(profile.link)}
+                type="button"
+              >
+                <div className="p-2 border border-[#463F3A] rounded-full">
+                  <img src={profile.img} alt="socials" width={20} height={20} />
+                </div>
+              </button>
+              // <SocialsButton
+              //   key={profile.id}
+              //   idProps={profile.id}
+              //   imgProps={profile.img}
+              //   linkProps={profile.link}
+              // />
             ))}
           </div>
         </div>
