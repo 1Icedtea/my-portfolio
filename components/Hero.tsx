@@ -7,7 +7,8 @@ import SocialsButton from "./ui/SocialButtons";
 
 const Hero = () => {
   function Redirect(url: string) {
-    window.location.replace(url);
+    // window.location.replace(url);
+    window.open(url);
   }
   return (
     <div className="relative w-full lg:min-h-[70vh] md:min-h-[100vh] pb-20 pt-36">
@@ -43,6 +44,7 @@ const Hero = () => {
                 key={profile.id}
                 onClick={() => Redirect(profile.link)}
                 type="button"
+                formTarget="_blank"
               >
                 <div className="p-2 border border-[#463F3A] rounded-full">
                   <img src={profile.img} alt="socials" width={20} height={20} />
