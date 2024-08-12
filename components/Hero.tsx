@@ -24,11 +24,11 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="flex flex-col items-center justify-center max-w-[70vw] md:max-w-2xl lg:max-w-[60vw]">
           <img
-            src="/avatar.png"
+            src="/profileAvatar.jpg"
             width={120}
             height={120}
             alt="avatar"
-            className="rounded-full backdrop-blur-lg shadow-xl border border-white-200 mb-4 md:w-[150px] lg:w-[200px]"
+            className="rounded-full backdrop-blur-lg shadow-xl border border-white-200 mb-4 md:w-[150px] lg:w-[200px] bg-center"
           />
           <h2 className="uppercase tracking-widest text-sm mb-2 md:text-lg lg:text-2xl">
             Follow my web devt journey
