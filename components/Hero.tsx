@@ -56,6 +56,14 @@ const Hero = () => {
               // />
             ))}
           </div>
+          <button
+            className="bg-transparent border border-[#463F3A] my-6 px-6 py-3 rounded-full hover:bg-white transition-all"
+            id="shopifyBtn"
+            onClick={() => Redirect("https://filmgray.myshopify.com/")}
+            type="button"
+          >
+            Visit Demo Site
+          </button>
         </div>
       </div>
     </div>
